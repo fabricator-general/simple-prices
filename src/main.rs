@@ -56,14 +56,12 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 None => continue,
             };
 
-            let usd_result = value.get("usd");
-            let usd = match usd_result {
+            let usd = match value.get("usd") {
                 Some(v) => v,
                 None => continue,
             };
 
-            let change_result = value.get("usd_24h_change");
-            let change = match change_result {
+            let change = match value.get("usd_24h_change") {
                 Some(v) => v,
                 None => continue,
             };
